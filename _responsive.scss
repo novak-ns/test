@@ -1,0 +1,494 @@
+@include media-1154 {
+    .nav {
+        &_hamburger {
+            cursor: pointer;
+            position: absolute;
+            right: 1%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            width: 30px;
+            &_span {
+                height: 2px;
+                width: 100%;
+                display: block;
+                margin-top: 1px;
+                margin-bottom: 5px;
+                background-color: set-text-color($primary-color);
+                position: relative;
+                @include transition-ease;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &_menu {
+            position: fixed;
+            background: $primary-color;
+            height: 100vh;
+            max-width: 80%;
+            width: 100%;
+            flex-direction: column;
+            padding: 0;
+            right: -80%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: center;
+            @include transition-ease;
+            
+            &_item {
+                margin: 15px;
+            }
+        }
+    }
+    .nav_menu.active {
+        right: 0%;
+        &::before {
+            content: ' ';
+            background: $primary-color;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -80%;
+            width: 80%;
+            height: 100%;
+            opacity: 0.6;
+            }
+    }
+    .nav_hamburger.open span:first-of-type {
+        transform: rotate(1125deg);
+        transition: all 800ms ease;
+        background-color: $secondary-color;
+    }
+    
+    .nav_hamburger.open span:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+        background-color: $secondary-color;
+    }
+    
+    .nav_hamburger.open span:last-of-type {
+        transform: rotate(1395deg);
+        top: -13px;
+        transition: all 800ms ease;
+        background-color: $secondary-color;
+    }
+    .skills {
+        &_content {
+            max-width: 800px;
+            &_responsive_image {
+                width: 250px;
+                height: 200px;
+            }
+        }
+    }
+    .contact {
+        &_footer {
+            &_logo {
+                height: 100px;
+            }
+            &_menu {
+                font-size: 12px;
+            }
+            &_icons {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@include media-850 {
+    .title {
+        font-size: 20px;
+        padding-top: 10px;
+        margin-bottom: 30px;
+    }
+    .nav {
+        &_icons {
+            font-size: 10px;
+            left: 1%;
+            max-width: 85%;
+        }
+    }
+    .about {
+        &_myself {
+            font-size: 14px;
+        }
+        &_jobs {
+            margin: 16px;
+            padding: 12px;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 2px solid $secondary-color;
+            h1, h2, h3, h4, h5 {
+                margin-bottom: 3px;
+            }
+            &__job {
+                &__date {
+                    font-size: 18px;
+                }
+                h3 {
+                    font-size: 16px;
+                }
+                h5 {
+                    font-size: 12px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .skills {
+        &_content {
+            max-width: 90%;
+            display: flex;
+            margin-top: 40px;
+            &_responsive_image {
+                height: 120px;
+                width: 150px;
+                margin-top: 100px;
+            }
+            &_languages {
+                max-width: 150px;
+                &_heading {
+                    font-size: 16px;
+                }
+                padding-right: 5;
+               &_image {
+                height: 60px;
+               }
+               &_h3 {
+                margin-top: 5px;
+                margin-bottom: 10px;
+                font-size: 14px;
+               }
+            }
+            &_tools {
+                max-width: 150px;
+                &_heading {
+                    font-size: 16px;
+                }
+                padding-left: 5;
+                &_image {
+                    height: 60px;
+                }
+                &_h3 {
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .projects {
+        &_main {
+            &_law {
+                width: 300px;
+                margin-right: 5px;
+                font-size: 16px;
+            }
+            &_food {
+                width: 300px;
+                margin-left: 5px;
+                font-size: 16px;
+            }
+            img {
+                width: 250px;
+                height: 250px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .contact {
+        &_me {
+            margin-top: 20px;
+            &_mail {
+                &_form {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    &_textbox {
+                        width: 250%;
+                        height: 40px;
+                        padding: 3px;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+                        &:first-child{
+                            margin-right: 0px;
+                        }
+                    }
+                    &_textarea {
+                        height: 120px;
+                        margin-bottom: 15px;
+                        font-size: 15px;
+                        padding: 3px;
+                        width: 250%;
+                    }
+                    &_btn {
+                        width: 80px;
+                        height: 25px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        text-align: center;
+                        align-items: center;
+                        @include transition-ease;
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+        &_footer {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            &_logo {
+                height: 75px;
+            }
+            &_menu {
+                margin-top: 20px;
+                font-size: 11px;
+                display: inline;
+                padding: 0px;
+                width: 90%;
+                text-align: center;
+                &_items {
+                    display: inline;
+                    &_link {
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                }
+                &_quote {
+                    font-size: 11px;
+                    max-width: 200px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 20px;
+                    h4 {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+
+                }
+            }
+            &_icons {
+                font-size: 8px;
+            }
+        }
+    }
+}
+
+@include media-555 {
+    .title {
+        font-size: 16px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+    .nav {
+        &_icons {
+            font-size: 8px;
+            left: 1%;
+            max-width: 85%;
+            display: flex;
+            flex-direction: column;
+        }
+        &_logo {
+            height: 55px;
+        }
+    }
+    .home {
+        &__name {
+            font-size: 50px;
+        }
+        h2 {
+            font-size: 19px;
+        }
+        &_icons {
+            margin-bottom: 30px;
+            font-size: 14px;
+            bottom: 0;
+        }
+    }
+    .about {
+        &_myself {
+            font-size: 12px;
+        }
+        &_jobs {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+            border-bottom: 2px solid $secondary-color;
+            h1, h2, h3, h4, h5 {
+                margin-bottom: 2px;
+            }
+            &__job {
+                &__date {
+                    font-size: 14px;
+                }
+                h3 {
+                    font-size: 13px;
+                }
+                h5 {
+                    font-size: 11px;
+                }
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .skills {
+        &_content {
+            max-width: 90%;
+            display: flex;
+            
+            margin-top: 20px;
+            &_responsive_image {
+                height: 40px;
+                width: 50px;
+                margin-top: 100px;
+            }
+            &_languages {
+                max-width: 135px;
+                padding-right: 5;
+                &_heading {
+                    font-size: 14px;
+                }
+               &_image {
+                height: 30px;
+               }
+               &_h3 {
+                margin-top: 3px;
+                margin-bottom: 8px;
+                font-size: 12px;
+               }
+            }
+            &_tools {
+                max-width: 135px;
+                padding-left: 5;
+                &_heading {
+                    font-size: 14px;
+                }
+                &_image {
+                    height: 30px;
+                }
+                &_h3 {
+                    margin-top: 3px;
+                    margin-bottom: 8px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .projects {
+        &_main {
+            &_law {
+                width: 200px;
+                margin-right: 5px;
+                font-size: 14px;
+            }
+            &_food {
+                width: 200px;
+                margin-left: 5px;
+                font-size: 14px;
+            }
+            img {
+                width: 100px;
+                height: 100px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .contact {
+        &_me {
+            margin-top: 20px;
+            &_mail {
+                &_form {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    &_textbox {
+                        width: 150%;
+                        height: 30px;
+                        padding: 3px;
+                        font-size: 12px;
+                        margin-bottom: 10px;
+                        &:first-child{
+                            margin-right: 0px;
+                        }
+                    }
+                    &_textarea {
+                        height: 100px;
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                        padding: 3px;
+                        width: 150%;
+                    }
+                    &_btn {
+                        width: 60px;
+                        height: 17px;
+                        font-size: 12px;
+                        font-weight: 600;
+                        text-align: center;
+                        align-items: center;
+                        @include transition-ease;
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+        &_footer {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            &_logo {
+                height: 70px;
+                display: none;
+            }
+            &_menu {
+                margin-top: 10px;
+                font-size: 8px;
+                display: inline;
+                padding: 0px;
+                width: 90%;
+                text-align: center;
+                &_items {
+                    display: inline;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    &_link {
+                        margin: 0;
+                    }
+                }
+                &_quote {
+                    font-size: 7px;
+                    width: 250px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 5px;
+                    h4 {
+                        margin-top: 2px;
+                        margin-bottom: 5px;
+                    }
+
+                }
+            }
+            &_icons {
+                flex-direction: row;
+                font-size: 7px;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                &_link {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

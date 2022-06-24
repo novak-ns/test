@@ -1,0 +1,119 @@
+.contact {
+    &_me {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1300px;
+        margin-top: 100px;
+        &_mail {
+            &_form {
+                max-width: 800px;
+                text-align: center;
+                &_textbox {
+                    background: $secondary-color;
+                    border: none;
+                    width: calc(50% - 10px);
+                    height: 50px;
+                    padding: 12px;
+                    font-size: 17px;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                    opacity: 0.9;
+                    &:first-child{
+                        margin-right: 15px;
+                    }
+                }
+                &_textarea {
+                    background: $secondary-color;
+                    border: none;
+                    width: 100%;
+                    padding: 12px;
+                    font-size: 17px;
+                    height: 200px;
+                    resize: vertical;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                    opacity: 0.9;
+                }
+                &_btn {
+                    border: none;
+                    width: 120px;
+                    height: 40px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    @include transition-ease;
+                    &:hover{
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    &_footer {
+        background: linear-gradient(to top, rgba($secondary-color, 0.4), rgba($primary-color, 0.1));
+        margin-top: 150px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        &_logo {
+            height: 150px;
+            left: 1%;
+            position: relative;
+        }
+        &_menu {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 30px;
+            align-items: center;
+            &_items {
+                margin-bottom: 20px;
+                &_link {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
+            &_quote {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 400px;
+                text-align: center;
+                font-style: italic;
+                h4 {
+                    margin-top: 15px;
+                }
+            }
+        }
+        &_icons {
+            display: flex;
+            flex-direction: column;
+            right: 1%;
+            position: relative;
+            &_link {
+                margin-right: 5px;
+                margin-bottom: 18px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                &_a {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}
+
+
+
